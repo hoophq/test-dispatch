@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -euox pipefail
 
 : "${1:? Missing version! $0 <version> <author-name>}}"
 VERSION=$1
