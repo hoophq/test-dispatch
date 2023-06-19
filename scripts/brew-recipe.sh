@@ -7,9 +7,9 @@ VERSION=$1
 mkdir -p ./dist
 curl -s https://releases.hoop.dev/release/${VERSION}/checksums.txt > ./dist/checksums.txt
 
-DARWIN_AMD64_CHECKSUM=$(grep hoop_${VERSION}_Darwin_amd64.tar.gz ./dist/checksums.txt |awk {'print $1'})
+DARWIN_AMD64_CHECKSUM=$(grep hoop_${VERSION}_Darwin_x86_64.tar.gz ./dist/checksums.txt |awk {'print $1'})
 DARWIN_ARM64_CHECKSUM=$(grep hoop_${VERSION}_Darwin_arm64.tar.gz ./dist/checksums.txt |awk {'print $1'})
-LINUX_AMD64_CHECKSUM=$(grep hoop_${VERSION}_Linux_amd64.tar.gz ./dist/checksums.txt |awk {'print $1'})
+LINUX_AMD64_CHECKSUM=$(grep hoop_${VERSION}_Linux_x86_64.tar.gz ./dist/checksums.txt |awk {'print $1'})
 LINUX_ARM64_CHECKSUM=$(grep hoop_${VERSION}_Linux_arm64.tar.gz ./dist/checksums.txt |awk {'print $1'})
 
 cat - > hoop.rb <<EOF
