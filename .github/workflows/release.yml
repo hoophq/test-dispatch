@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Generate Brew Tap
-        run: ./scripts/brew-recipe.sh
+        run: ./scripts/brew-recipe.sh ${{inputs.version}}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Release ${{inputs.version}}
