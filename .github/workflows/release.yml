@@ -21,7 +21,7 @@ jobs:
         with:
           commit_message: Release ${{inputs.version}}
       - name: Get Changelog
-        run: curl https://releases.hoop.dev/release/${{inputs.version}}/CHANGELOG.txt > ./dist/CHANGELOG.txt
+        run: curl https://releases.hoop.dev/release/${{inputs.version}}/release/CHANGELOG.txt > ./dist/CHANGELOG.txt
       - name: Publish Release
         uses: softprops/action-gh-release@v1
         with:
